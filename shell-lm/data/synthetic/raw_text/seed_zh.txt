@@ -1,0 +1,2 @@
+示例种子是可选的；默认情况下，我们从 Hugging Face 的 wikimedia/wikipedia 数据集（20231101.zh）抽取中性段落来合成任务。
+

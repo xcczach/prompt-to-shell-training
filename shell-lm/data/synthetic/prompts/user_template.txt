@@ -1,0 +1,11 @@
+Context:
+{context}
+
+Constraints:
+- OS distribution target: Linux 45%, macOS 25%, Windows 30%.
+- Shell types: bash/zsh/fish on Linux and macOS; PowerShell/cmd on Windows (see ratios).
+- One single-line command (pipes ok), no multi-line scripts.
+- If operation could be destructive, set requires_confirm=true and prefer a safe variant.
+- Produce Chinese for half of tasks, English for the other half.
+- Output ONLY the JSON object.
+

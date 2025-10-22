@@ -1,0 +1,28 @@
+model_name: Qwen/Qwen2.5-0.5B-Instruct
+quantization: qlora
+bf16: true
+seq_len: 2048
+packing: true
+optimizer:
+  name: adamw
+  lr: 2.0e-4
+  weight_decay: 0.1
+  warmup_ratio: 0.03
+scheduler: cosine
+lora:
+  r: 32
+  alpha: 32
+  target_modules: all-linear
+fsdp:
+  enable: true
+  shard_grad_op: true
+  cpu_offload: false
+gradient_checkpointing: true
+logging_steps: 20
+eval_steps: 200
+save_steps: 1000
+max_steps: 20000
+train_file: data/splits/train.jsonl
+val_file: data/splits/val.jsonl
+output_dir: outputs/qwen0.5b-shell
+
